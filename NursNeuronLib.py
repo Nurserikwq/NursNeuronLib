@@ -1,6 +1,6 @@
 import numpy as np
 from nnfs.datasets import spiral_data
-
+import math
 
 class NursNeuron:
 
@@ -29,7 +29,14 @@ class Dense:
 class ActivationRelu:
 
     def forward(self, inputs):
+
         self.output = np.maximum(0, inputs)
+/
+
+class ActivationSoftMax:
+    e = math.e
+    def forward(self, inputs):
+
 
 
 
